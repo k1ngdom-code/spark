@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select level</title>
+    <link rel="stylesheet" href="selection1.css">
+</head>
+<body>
+   <h3>Computer Science Department</h3>
+    <p1>Select level below</p1>
+
+<div class="levelsel">
+     <ul class="level-list">
+<li class="level">
+    <input type="radio" name="level" id="first">
+    <label for="first">100 Lvl</label>
+       
+        <div class="level-content">
+         <ul class="semestersel">
+            <li onclick="window.location.href='firstsemesterpage.html'">Ist Semester</li>
+            <li onclick="window.location.href='firstsemesterpage.html'">2nd Semester</li>
+         </ul>   
+        </div>
+    
+</li>
+<li class="level">
+    <input type="radio" name="level" id="second">
+    <label for="second">200 Lvl</label>
+   
+        <div class="level-content">
+            <ul class="semestersel">
+            <li>Ist Semester</li>
+            <li>2nd Semester</li>
+         </ul> 
+        </div>
+
+</li>
+<li class="level">
+    <input type="radio" name="level" id="third">
+    <label for="third">300 Lvl</label>
+           <div class="level-content">
+            <ul class="semestersel">
+            <li>Ist Semester</li>
+            <li>2nd Semester</li>
+         </ul> 
+        </div>
+ </li>
+
+ <li class="level">
+    <input type="radio" name="level" id="fourth">
+    <label for="fourth">400 Lvl</label>
+           <div class="level-content">
+            <ul class="semestersel">
+            <li>Ist Semester</li>
+            <li>2nd Semester</li>
+         </ul> 
+        </div>
+</li>
+
+    </ul>
+</div>
+<script>
+    function open(){
+        window.location.href="firstsemesterpage.html"
+    }
+</script>
+</body>
+</html>

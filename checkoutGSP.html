@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <!--Checkout message-->
+    <div id="checkoutdiv">
+    <h3>Checkout</h3>
+    <p>Proceed to checkout to unlock pdf</p>
+    <button onclick="openCheckout()">Checkout</button>
+    </div>
+
+   <div class="div"> <div id="transfer-modal">
+        <ul>
+            <li class="email">Email<span id="emailaddress">okohm256@gmail.com</span></li>
+            <li class="amount">Amount<span id="amounttosend">N500</span></li>
+            <li class="bank">Bank<span id="bankname">Opay</span></li>
+            <li class="accno">Account no. <span id="accnum">7065004320</span></li>
+        </ul>
+        <button id="paid">I have made payment</button>
+    </div>
+   </div>
+    <!--Button to download pdf appears here
+<div id="pdfactive">
+    <h4>Your STA pdf has been unlocked!</h4>
+    <span>Dowload below</span>
+    <button class="download" onclick="downloadMTH()">Download</button>
+</div>-->
+<div id="notificationdiv" style="display:none">
+    <h2>Done!</h2>
+    <p6>Upload image of your payment recipt below for validation</p6>
+<label for="imageupload"><img src="" id="imagepreview"></label>
+    <input type="file" name="" id="imageupload" accept="image*/" style="display: none;">
+   <p10>Tap to upload</p10>
+<span id="course" style="display: none;">GSP</span>
+   <input type="text" id="emailAddress" placeholder="Email here...">
+   <input type="text" id="username" placeholder="Username">
+    <button id="send">Upload</button>
+    <p2>Your pdf will be sent to your email shortly.</p2>
+</div>
+
+
+<button style="display:none" id="back" onclick="window.location.href='firstsemesterpage.html'">Back</button>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>   
+<script type="module" src="firebasestore.js"></script>
+    <script src="checkout.js"></script>
+<script>
+    const imageupload=  document.getElementById("imageupload")
+     const preview = document.getElementById("imagepreview")
+   imageupload.addEventListener("change", function (e) {
+            const file = e.target.files[0]
+           
+            if (file && file.type.startsWith("image/")) {
+                const reader = new FileReader()
+                reader.onload = function (event) {
+                    preview.src = event.target.result;
+                }
+               
+                reader.readAsDataURL(file)
+            }
+
+            const imageURL = URL.createObjectURL(file)
+
+            localStorage.setItem("uploadedImg", e.target.result)
+        })
+        
+
+</script>
+<script src="spark.js"></script>
+</body>
+</html>
