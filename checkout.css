@@ -162,7 +162,7 @@ p6{
 p10{
     display: flex;
     justify-content: center;
-    transform: translateY(-180px);
+    transform: translate(10px,-180px);
     font-size: 17px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 100;
