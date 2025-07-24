@@ -20,14 +20,14 @@ transform: translate(-170px);
     display: flex;
     font-family: sans seriff;
     width: 500px;
-    transform: translate(20px, -200px);
+    transform: translate(10px, -200px);
     color: white;
-    font-size: 26px;
+    font-size: 18px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
   }
   span{
-    transform: translate(130px, 30px);
+    transform: translate(130px, 40px);
     display: flex;
     position: absolute;
   }
@@ -81,8 +81,8 @@ font-size: 30px;
 
 }
 .header-section p{
-    font-size: 25px;
-    transform: translate(60px, -40px);
+    font-size: 18px;
+    transform: translate(40px, -40px);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
     color: #000054;
